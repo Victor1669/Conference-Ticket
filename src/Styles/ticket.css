@@ -1,0 +1,103 @@
+.ticketScreenContainer {
+  width: 95%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* HEADER */
+.ticketScreenHeader {
+  width: clamp(290px, 55vw, 500px);
+  text-align: center;
+  margin-bottom: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ticketTitle {
+  font-size: var(--ticketFontSize);
+  margin: 15px 0;
+}
+.ticketMessage {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "InconsolataVariable";
+  width: 70%;
+}
+.userName {
+  background: linear-gradient(90deg, var(--Orange700), var(--Neutral0));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ticketEmail {
+  color: var(--Orange500);
+}
+
+/* BODY */
+.ticketScreenBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ticketContainer {
+  width: var(--ticketContainerWidth);
+  height: var(--ticketContainerHeight);
+  position: relative;
+}
+.ticketImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.logoDate {
+  width: clamp(185px, 60%, 250px);
+  translate: 20px 5px;
+
+  .logo {
+    width: 85%;
+    margin-bottom: 0;
+  }
+  p {
+    font: 100 var(--dateFontSize) "InconsolataVariable";
+    margin-left: 19%;
+  }
+}
+/* INFORMAÇÕES DO USUÁRIO NO TICKET */
+.userInfoContainer {
+  display: flex;
+
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.userInfoImage {
+  width: var(--userImageSize);
+  height: var(--userImageSize);
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.userInfoName {
+  font-size: var(--userNameFontSize);
+  text-transform: capitalize;
+}
+.userInfoGitHub {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--userGithubFontSize);
+}
+.ticketID {
+  width: 75px;
+  height: fit-content;
+  align-self: center;
+  position: absolute;
+  inset: 0 var(--ticketIDTranslate) 0 auto;
+
+  rotate: 0 0 1 90deg;
+
+  text-align: center;
+  font: 600 20px "InconsolataVariable";
+  color: rgba(128, 128, 128, 0.753);
+}

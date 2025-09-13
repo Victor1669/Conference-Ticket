@@ -1,0 +1,136 @@
+form {
+  width: clamp(290px, 33vw, 450px);
+}
+/* ESTILO PRA TODOS OS CAMPOS */
+.field {
+  margin: clamp(15px, 2vw, 18px) 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.labelText {
+  padding-bottom: 8px;
+}
+.inputBackground {
+  background-color: var(--inputBack);
+
+  &:hover {
+    background-color: var(--Neutral500);
+    cursor: pointer;
+  }
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+input:not(#userImage) {
+  color: var(--Neutral0);
+
+  padding: 15px;
+  border: 1px solid var(--Neutral0);
+  border-radius: 10px;
+
+  font-size: var(--inputFontSize);
+}
+.imageWarning,
+.errorMessage {
+  margin-top: 6px;
+  height: 1rem;
+
+  display: flex;
+  align-items: end;
+  gap: 6px;
+}
+
+.errorMessage {
+  font-size: 0.8rem;
+  color: rgb(226, 84, 84);
+}
+
+/* CAMPO DE IMAGEM */
+.file {
+  padding: 20px;
+  border: 1px dashed var(--Neutral0);
+  border-radius: 20px;
+  text-align: center;
+  height: 120px;
+
+  position: relative;
+}
+.placeHolderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fileInput {
+  border-radius: inherit;
+  display: none;
+  font-size: 0;
+  border: 0;
+
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.uploadImage {
+  width: var(--uploadImageSize);
+  height: var(--uploadImageSize);
+  background-color: hsla(245, 19%, 35%, 0.445);
+
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.uploadMessage {
+  font-size: var(--uploadMessageFontSize);
+}
+.uploadButtons {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  inset: 65% 0 10px;
+}
+.imgButton {
+  background-color: hsla(245, 19%, 35%, 0.432);
+
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 5px;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.imageWarning {
+  font-size: var(--imageSizeWarning);
+}
+
+/* BOTÃO SUBMIT */
+.submitButton {
+  width: 100%;
+  background-color: var(--Orange500);
+
+  color: var(--Neutral900);
+  font: 900 0.8rem "InconsolataVariable";
+
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--Orange500);
+
+  &:hover {
+    background-color: hsl(7, 65%, 47%);
+    cursor: pointer;
+  }
+  &:focus {
+    border-color: black;
+    outline: 1px solid white;
+  }
+}

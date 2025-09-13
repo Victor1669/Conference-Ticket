@@ -1,0 +1,137 @@
+:root {
+  --Neutral0: hsl(0, 0%, 100%);
+  --Neutral300: hsl(252, 6%, 83%);
+  --Neutral500: hsl(245, 15%, 58%);
+  --Neutral700: hsl(245, 19%, 35%);
+  --Neutral900: hsl(248, 70%, 10%);
+
+  --Orange500: hsl(7, 88%, 67%);
+  --Orange700: hsl(7, 71%, 60%);
+
+  --pdBottom: 100px;
+
+  /* BACKGROUNDS */
+  /* BG DE FUNDO */
+  --bgFundo: url("/images/background-mobile.png") center;
+  /* IMAGEM ESQUERDA-BAIXO */
+  --bgLeftBottomSize: 80%;
+  --bgLeftBottomImage: url("/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+  /* IMAGEM DIREITA-CIMA */
+  --bgRightTopSize: 30%;
+  --bgRightTopTranslate: 25px;
+
+  /* HEADER */
+  --headerTitleFontSize: 1.5rem;
+  --headerSubitleFontSize: 1.125rem;
+
+  /* FORM */
+  --inputFontSize: 1rem;
+  --inputBack: hsla(245, 19%, 35%, 0.281);
+
+  --uploadImageSize: 50px;
+  --uploadMessageFontSize: 14px;
+  --imageSizeWarning: 11px;
+
+  /* TICKET */
+
+  --ticketContainerWidth: clamp(290px, 33vw, 450px);
+  --ticketContainerHeight: calc(var(--ticketContainerWidth) / 2.14);
+  --ticketFontSize: 1.5rem;
+
+  --logodateWidth: 185px;
+  --logoWidth: 125px;
+  --dateFontSize: 0.7rem;
+
+  --userImageSize: 40px;
+  --userNameFontSize: 1rem;
+  --userGithubFontSize: 0.8rem;
+
+  --ticketIDTranslate: -10px;
+}
+@media only screen and (min-width: 769px) {
+  :root {
+    /* BACKGROUNDS */
+    /* BG DE FUNDO */
+    --bgFundo: url("/images/background-desktop.png") center;
+    /* IMAGEM ESQUERDA-BAIXO */
+    --bgLeftBottomSize: 40%;
+    --bgLeftBottomImage: url("/images/pattern-squiggly-line-bottom-desktop.svg");
+    /* IMAGEM DIREITA-CIMA */
+    --bgRightTopSize: 20%;
+    --bgRightTopTranslate: 50px;
+
+    /* HEADER */
+    --headerTitleFontSize: 2rem;
+    --headerSubitleFontSize: 0.85rem;
+
+    /* FORM */
+    --inputFontSize: 0.75rem;
+    --uploadImageSize: 40px;
+
+    --pdBottom: 10px;
+
+    --uploadImageSize: 50px;
+    --uploadMessageFontSize: 14px;
+    --imageSizeWarning: 11px;
+
+    /* TICKET */
+    --ticketFontSize: 2rem;
+
+    --userImageSize: 55px;
+    --userNameFontSize: 1.1rem;
+    --userGithubFontSize: 0.9rem;
+  }
+  body {
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  :root {
+    --ticketIDTranslate: 0;
+  }
+}
+
+* {
+  font-family: "Inconsolata";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--Neutral0);
+}
+
+.App {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: var(--pdBottom);
+  background: url("/images/pattern-lines.svg") top center no-repeat,
+    url("/images/pattern-circle.svg") center right 25vw no-repeat,
+    var(--bgLeftBottomImage) bottom left no-repeat,
+    url("/images/pattern-squiggly-line-top.svg") top var(--bgRightTopTranslate)
+      right no-repeat,
+    var(--bgFundo);
+
+  background-size: cover, 13%, var(--bgLeftBottomSize), var(--bgRightTopSize),
+    cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo.app {
+    width: 160px;
+  }
+}
+img {
+  border-radius: inherit;
+}
+.logo {
+  margin: 20px 0;
+  width: 100%;
+}
+.focusOutline {
+  &:focus {
+    outline: 2px solid var(--Neutral500);
+    outline-offset: 3px;
+  }
+}
