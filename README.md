@@ -2,7 +2,7 @@ Esse desafio consiste em fazer uma tela de login com imagem, para depois mostrar
 
 Tecnologias: React.js.
 
-Bibliotecas: react-hook-form e yup.
+Bibliotecas: react-hook-form, yup e RHF DevTools.
 
 Disponível em: https://conference-ticket-o6it.onrender.com/
 
